@@ -36,6 +36,4 @@ O protótipo de baixa fidelidade foi desenvolvido no Figma e está acessível at
 Um screencast foi criado para demonstrar o protótipo de baixa fidelidade, incluindo explicação em áudio ou legenda.  
 🔗 [Assista ao vídeo no YouTube](LINK_DO_VIDEO)  
 
-Cada entrega terá sua própria seção neste README, garantindo acesso fácil aos artefatos relacionados.
-
 </details>
