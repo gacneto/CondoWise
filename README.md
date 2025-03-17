@@ -26,7 +26,7 @@ O objetivo do CondoWise é otimizar a gestão condominial, centralizando process
 
 ### 📖 Histórias de Usuário  
 As histórias de usuário foram definidas de forma clara e completa, com cenários de validação e entrega de valor bem definida.  
-🔗 [Acesse as histórias de usuário](LINK_DO_DOCUMENTO_NO_GITHUB)  
+🔗 [Acesse as histórias de usuário](./historias_de_usuario.md)  
 
 ### 🎨 Protótipo de Lo-Fi  
 O protótipo de baixa fidelidade foi desenvolvido no Figma e está acessível através do link abaixo:  
