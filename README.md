@@ -13,11 +13,11 @@ O objetivo do CondoWise é otimizar a gestão condominial, centralizando process
 🚧 Em desenvolvimento 🚧
 
 ### 👨‍💻 Participantes
-- **Luca Monteiro**
-- **Lucas Barcelar**
-- **João Pedro Gomes**
-- **Tiago Galvão**
-- **Caio**
+- **Luca Monteiro de Victor**
+- **Lucas Barcelar de Carvalho**
+- **João Pedro Gomes Penedo**
+- **Tiago Galvão Monteiro**
+- **Caio Felipe da Silva Rodrigues**
 
 ## 📦 Entrega 01
 
