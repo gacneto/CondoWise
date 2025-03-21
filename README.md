@@ -39,7 +39,7 @@ As histórias de usuário foram definidas de forma clara e completa, com cenári
 
 ### 🎨 Protótipo de Lo-Fi  
 O protótipo de baixa fidelidade foi desenvolvido no Figma e está acessível através do link abaixo:  
-🔗 [Acesse os protótipos lo-fi](Entregaveis/./protootipos_lo_fi.pdf)  
+🔗 [Acesse os protótipos lo-fi](Entregaveis/./prototipos_lo_fi.pdf)  
 
 ### 📹 Apresentação do Protótipo  
 Um screencast foi criado para demonstrar o protótipo de baixa fidelidade, incluindo explicação em áudio ou legenda.  
