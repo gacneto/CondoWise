@@ -34,11 +34,11 @@ Para uma melhor visualização das entregas do projeto, disponibilizamos os segu
 
 ### 📖 Histórias de Usuário  
 As histórias de usuário foram definidas de forma clara e completa, com cenários de validação e entrega de valor bem definida.  
-🔗 [Acesse as histórias de usuário](./historias_de_usuario.md)  
+🔗 [Acesse as histórias de usuário](Entregáveis/./historias_de_usuario.md)  
 
 ### 🎨 Protótipo de Lo-Fi  
 O protótipo de baixa fidelidade foi desenvolvido no Figma e está acessível através do link abaixo:  
-🔗 [Acesse os protótipos lo-fi](./protótipos_lo_fi.pdf)  
+🔗 [Acesse os protótipos lo-fi](Entregáveis/./protótipos_lo_fi.pdf)  
 
 ### 📹 Apresentação do Protótipo  
 Um screencast foi criado para demonstrar o protótipo de baixa fidelidade, incluindo explicação em áudio ou legenda.  
