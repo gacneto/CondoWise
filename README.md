@@ -28,7 +28,9 @@ O objetivo do CondoWise é otimizar a gestão condominial, centralizando process
 
 Para uma melhor visualização das entregas do projeto, disponibilizamos os seguintes links:  
 
-- 📌 [Acesse o link do Miro](https://miro.com/app/board/uXjVIVPEAic=/?share_link_id=157639372026)  → Acesse as histórias de usuário e os protótipos Lo-Fi.  
+📌 [Acesse o link do Miro](https://miro.com/app/board/uXjVIVPEAic=/?share_link_id=157639372026)  → Acesse as histórias de usuário e os protótipos Lo-Fi.  
+
+<br>
 
 ### 📖 Histórias de Usuário   
 
@@ -48,9 +50,13 @@ As histórias de usuário foram definidas de forma clara e completa, com cenári
 🔗 [Acesse as histórias de usuário escrito](./historias_de_usuario.md)  
 🔗 [Acesse as histórias de usuário post-it](Entregaveis/./historias_de_usuario.jpg) 
 
+<br>
+
 ### 🎨 Protótipo de Lo-Fi  
 O protótipo de baixa fidelidade foi desenvolvido no Figma e está acessível através do link abaixo:  
 🔗 [Acesse os protótipos lo-fi](Entregaveis/./prototipos_lo_fi.pdf)  
+
+<br>
 
 ### 📹 Apresentação do Protótipo  
 Um screencast foi criado para demonstrar o protótipo de baixa fidelidade, incluindo explicação em áudio ou legenda.  
