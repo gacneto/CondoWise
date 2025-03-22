@@ -24,7 +24,20 @@ O objetivo do CondoWise é otimizar a gestão condominial, centralizando process
 <details>
   <summary>📌 Clique aqui para expandir os detalhes da Entrega 01</summary>
 
-### 📖 Histórias de Usuário  
+### 📖 Histórias de Usuário   
+
+| Nº | Perfil   | Nome da História                          |
+|----|---------|------------------------------------------|
+| 1  | Morador | Agendamento de Áreas Comuns             |
+| 2  | Morador | Relato de Problemas e Manutenção        |
+| 3  | Síndico | Comunicados do Síndico                  |
+| 4  | Morador | Registro de Visitantes                  |
+| 5  | Morador | Gestão de Pagamentos e Boletos         |
+| 6  | Morador | Controle de Veículos e Estacionamento  |
+| 7  | Morador | Fórum de Discussões                    |
+| 8  | Morador | Envio de Encomendas e Notificações     |
+
+
 As histórias de usuário foram definidas de forma clara e completa, com cenários de validação e entrega de valor bem definida.  
 🔗 [Acesse as histórias de usuário escrito](./historias_de_usuario.md)  
 🔗 [Acesse as histórias de usuário post-it](Entregaveis/./historias_de_usuario.jpg) 
