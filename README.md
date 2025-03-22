@@ -28,7 +28,7 @@ O objetivo do CondoWise é otimizar a gestão condominial, centralizando process
 
 Para uma melhor visualização das entregas do projeto, disponibilizamos os seguintes links:  
 
-- 📌 **<a href="https://miro.com/app/board/uXjVIVPEAic=/?share_link_id=213408369827" target="_blank">Miro</a>** → Acesse as histórias de usuário e os protótipos Lo-Fi.  
+- 📌 [Acesse o link do Miro](https://miro.com/app/board/uXjVIVPEAic=/?share_link_id=157639372026)  → Acesse as histórias de usuário e os protótipos Lo-Fi.  
 
 ### 📖 Histórias de Usuário   
 
