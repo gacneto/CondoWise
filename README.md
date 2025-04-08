@@ -93,7 +93,24 @@ O projeto está sendo versionado com commits frequentes diretamente na branch `m
 
 O diagrama de classes representa a arquitetura completa do sistema, desde a interface do usuário até a camada de persistência.  
 📌 Imagem em alta resolução:  
-![Diagrama de Classes](Entregaveis/./DiagramaClasse.jpg)  
+![Diagrama de Classes](Entregaveis/./DiagramaClasse.png)  
+
+🔍 Veja abaixo cada classe individualmente para uma melhor visualização:
+
+- 🏢 [Condominio](Entregaveis/./Condominio.png)  
+- 👤 [Usuario](Entregaveis/./Usuario.png)  
+- 🧑‍💼 [Sindico](Entregaveis/./Sindico.png)  
+- 👥 [Morador](Entregaveis/./Morador.png)  
+- 🛡️ [Porteiro](Entregaveis/./Porteiro.png)  
+- 📦 [Encomenda](Entregaveis/./Encomenda.png)  
+- 👤 [Visitante](Entregaveis/./Visitante.png)  
+- 🔧 [ChamadoManutencao](Entregaveis/./ChamadoManutencao.png)  
+- 💳 [Boleto](Entregaveis/./Boleto.png)  
+- 🏕️ [AreaComum](Entregaveis/./AreaComum.png)  
+- 📅 [ReservaComum](Entregaveis/./ReservaComum.png)  
+- 💬 [Mensagem](Entregaveis/./Mensagem.png)  
+- 🗣️ [ForumDiscussao](Entregaveis/./ForumDiscussao.png)  
+- 📢 [Comunicado](Entregaveis/./Comunicado.png)  
 
 <br>
 
