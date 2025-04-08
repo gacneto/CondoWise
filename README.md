@@ -92,7 +92,7 @@ O projeto está sendo versionado com commits frequentes diretamente na branch `m
 ### 🧩 Diagrama de Classes  
 
 O diagrama de classes representa a arquitetura completa do sistema, desde a interface do usuário até a camada de persistência.  
-📌 Imagem em alta resolução:  
+📌 Imagem em média resolução:  
 ![Diagrama de Classes](Entregaveis/./DiagramaClasse.jpg)  
 
 🔍 Veja abaixo cada classe individualmente para uma melhor visualização:
