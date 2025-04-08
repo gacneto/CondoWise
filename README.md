@@ -63,3 +63,53 @@ Um screencast foi criado para demonstrar o protótipo de baixa fidelidade, inclu
 🔗 [Assista ao vídeo no YouTube](https://youtu.be/hg_wGcwuK8I) 
 
 </details>
+
+## 📦 Entrega 02
+
+<details>
+  <summary>📌 Clique aqui para expandir os detalhes da Entrega 02</summary>
+
+### ✅ Histórias de Usuário Implementadas  
+
+Nesta entrega, foram implementadas as seguintes histórias de usuário, com interface funcional (texto ou gráfica) e persistência em memória:  
+
+| Nº | Perfil   | Nome da História                          |
+|----|---------|------------------------------------------|
+| 3  | Comunicado | Publicar comunicados             |
+| 8  | Encomenda | Registrar/Receber encomenda                 |
+
+🔗 [Acesse a pasta com os códigos das histórias](./Projeto%203%20workspace)
+
+<br>
+
+### 💻 Versionamento no GitHub  
+
+O projeto está sendo versionado com commits frequentes diretamente na branch `main`, conforme boas práticas de controle de versão.  
+🔗 [Acesse o repositório no GitHub](https://github.com/seu-usuario/seu-repositorio)  
+
+<br>
+
+### 🧩 Diagrama de Classes  
+
+O diagrama de classes representa a arquitetura completa do sistema, desde a interface do usuário até a camada de persistência.  
+📌 Imagem em alta resolução:  
+![Diagrama de Classes](Entregaveis/./DiagramaClasse.jpg)  
+
+<br>
+
+### 🐛 Issue Tracker  
+
+O controle de tarefas e bugs está sendo feito por meio do sistema de issues do GitHub.  
+📌 Print da tela do issue tracker:  
+![Issue Tracker](Entregaveis/./issue_tracker.png)  
+🔗 [Acesse as Issues](https://github.com/seu-usuario/seu-repositorio/issues)  
+
+<br>
+
+### 📹 Screencast da Entrega  
+
+Foi produzido um screencast demonstrando o uso do sistema nesta entrega, com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/seu-video)  
+
+</details>
+
