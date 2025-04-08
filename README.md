@@ -118,8 +118,8 @@ O diagrama de classes representa a arquitetura completa do sistema, desde a inte
 
 O controle de tarefas e bugs está sendo feito por meio do sistema de issues do GitHub.  
 📌 Print da tela do issue tracker:  
-![Issue Tracker](Entregaveis/./issue_tracker.png)  
-🔗 [Acesse as Issues](https://github.com/seu-usuario/seu-repositorio/issues)  
+![Issue Tracker](Entregaveis/./IssueTracker.png)  
+🔗 [Acesse as Issues](https://github.com/gacneto/CondoWise/issues)  
 
 <br>
 
