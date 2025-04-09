@@ -126,7 +126,7 @@ O controle de tarefas e bugs está sendo feito por meio do sistema de issues do 
 ### 📹 Screencast da Entrega  
 
 Foi produzido um screencast demonstrando o uso do sistema nesta entrega, com áudio explicativo ou legendas.  
-🔗 [Assista ao vídeo no YouTube](https://youtu.be/seu-video)  
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/QYOAJ8MYoWI)  
 
 </details>
 
