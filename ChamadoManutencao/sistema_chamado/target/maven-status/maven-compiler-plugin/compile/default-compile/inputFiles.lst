@@ -1,10 +1,7 @@
-D:\sistema-encomendas\src\main\java\com\condominio\MenuPrincipal.java
-D:\sistema-encomendas\src\main\java\com\condominio\model\Comunicado.java
-D:\sistema-encomendas\src\main\java\com\condominio\model\Encomenda.java
-D:\sistema-encomendas\src\main\java\com\condominio\model\Morador.java
-D:\sistema-encomendas\src\main\java\com\condominio\model\ReservaAreaComum.java
-D:\sistema-encomendas\src\main\java\com\condominio\repository\ComunicadoRepository.java
-D:\sistema-encomendas\src\main\java\com\condominio\repository\EncomendaRepository.java
-D:\sistema-encomendas\src\main\java\com\condominio\repository\MoradorRepository.java
-D:\sistema-encomendas\src\main\java\com\condominio\repository\ReservaAreaComumRepository.java
-D:\sistema-encomendas\src\main\java\com\condominio\SistemaEncomendasApplication.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/apresentacao/SistemaChamadosUI.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/modelo/Chamado.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/modelo/Morador.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/modelo/Sindico.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/modelo/StatusChamado.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/modelo/Usuario.java
+/Users/lucasbarcelar/Documents/CondoWise/ChamadoManutencao/sistema_chamado/src/main/java/com/chamado_manut/servico/SistemaChamadosService.java
