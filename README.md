@@ -144,7 +144,10 @@ Nesta entrega, foram implementadas as seguintes histórias de usuário, com inte
 | 1  | Agendamento Área Comum | Agendar área comum             |
 | 2  | Chamado Manutenção | Relatar Problemas e Manutenção                |
 
-🔗 [Acesse a pasta com os códigos das histórias](./Projeto%203%20workspace)
+🔗 [Acesse a pasta com os códigos da história 1](./ChamadoManutencao)
+
+🔗 [Acesse a pasta com os códigos da história 2](./Projeto%203%20workspace)
+
 
 <br>
 
