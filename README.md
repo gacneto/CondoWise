@@ -130,3 +130,48 @@ Foi produzido um screencast demonstrando o uso do sistema nesta entrega, com áu
 
 </details>
 
+## 📦 Entrega 03
+
+<details>
+  <summary>📌 Clique aqui para expandir os detalhes da Entrega 03</summary>
+
+### ✅ Histórias de Usuário Implementadas  
+
+Nesta entrega, foram implementadas as seguintes histórias de usuário, com interface funcional (texto ou gráfica) e persistência em memória:  
+
+| Nº | Perfil   | Nome da História                          |
+|----|---------|------------------------------------------|
+| 1  | Agendamento Área Comum | Agendar área comum             |
+| 2  | Chamado Manutenção | Relatar Problemas e Manutenção                |
+
+🔗 [Acesse a pasta com os códigos das histórias](./Projeto%203%20workspace)
+
+<br>
+
+### 💻 Versionamento no GitHub  
+
+O projeto está sendo versionado com commits frequentes diretamente na branch `main`, conforme boas práticas de controle de versão.  
+🔗 [Acesse o repositório no GitHub](https://github.com/gacneto/CondoWise)  
+
+<br>
+
+### 🐛 Issue Tracker  
+
+O controle de tarefas e bugs está sendo feito por meio do sistema de issues do GitHub.  
+📌 Print da tela do issue tracker:  
+![Issue Tracker](Entregaveis/./IssueTracker2.png)  
+🔗 [Acesse as Issues](https://github.com/gacneto/CondoWise/issues)  
+
+<br>
+
+### 📹 Screencast da Entrega  
+
+Foi produzido um screencast referente a História 1 - Agendamento Área Comum, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/cVwvAxG7Viw)  
+
+Foi produzido um screencast referente a História 2 - Chamado Manutenção, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/RyAI-Ovyhzs) 
+
+</details>
+
+
