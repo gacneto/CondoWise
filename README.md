@@ -85,7 +85,7 @@ Nesta entrega, foram implementadas as seguintes histórias de usuário, com inte
 ### 💻 Versionamento no GitHub  
 
 O projeto está sendo versionado com commits frequentes diretamente na branch `main`, conforme boas práticas de controle de versão.  
-🔗 [Acesse o repositório no GitHub](https://github.com/gacneto/CondoWise)  
+🔗 [Acesse o repositório no GitHub](https://github.com/gacneto/CondoWise/activity)  
 
 <br>
 
@@ -151,7 +151,7 @@ Nesta entrega, foram implementadas as seguintes histórias de usuário, com inte
 ### 💻 Versionamento no GitHub  
 
 O projeto está sendo versionado com commits frequentes diretamente na branch `main`, conforme boas práticas de controle de versão.  
-🔗 [Acesse o repositório no GitHub](https://github.com/gacneto/CondoWise)  
+🔗 [Acesse o repositório no GitHub](https://github.com/gacneto/CondoWise/activity)  
 
 <br>
 
