@@ -1,0 +1,10 @@
+D:\sistema-encomendas\src\main\java\com\condominio\MenuPrincipal.java
+D:\sistema-encomendas\src\main\java\com\condominio\model\Comunicado.java
+D:\sistema-encomendas\src\main\java\com\condominio\model\Encomenda.java
+D:\sistema-encomendas\src\main\java\com\condominio\model\Morador.java
+D:\sistema-encomendas\src\main\java\com\condominio\model\ReservaAreaComum.java
+D:\sistema-encomendas\src\main\java\com\condominio\repository\ComunicadoRepository.java
+D:\sistema-encomendas\src\main\java\com\condominio\repository\EncomendaRepository.java
+D:\sistema-encomendas\src\main\java\com\condominio\repository\MoradorRepository.java
+D:\sistema-encomendas\src\main\java\com\condominio\repository\ReservaAreaComumRepository.java
+D:\sistema-encomendas\src\main\java\com\condominio\SistemaEncomendasApplication.java
