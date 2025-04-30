@@ -1,0 +1,8 @@
+com\condominio\SistemaEncomendasApplication.class
+com\condominio\repository\MoradorRepository.class
+com\condominio\repository\EncomendaRepository.class
+com\condominio\MenuPrincipal.class
+com\condominio\repository\ComunicadoRepository.class
+com\condominio\model\Comunicado.class
+com\condominio\model\Morador.class
+com\condominio\model\Encomenda.class
