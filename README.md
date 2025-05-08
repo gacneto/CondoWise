@@ -177,4 +177,57 @@ Foi produzido um screencast referente a História 2 - Chamado Manutenção, demo
 
 </details>
 
+## 📦 Entrega 04
+
+<details>
+  <summary>📌 Clique aqui para expandir os detalhes da Entrega 04</summary>
+
+### ✅ Histórias de Usuário Implementadas  
+
+Nesta entrega, foram implementadas as seguintes histórias de usuário, com interface funcional (texto ou gráfica) e persistência em memória:  
+
+| Nº | Perfil   | Nome da História                          |
+|----|---------|------------------------------------------|
+| 4  | Registro de Visitantes | Registrar a entrada de visitantes             |
+| 5  | Gestão de Pagamentos e Boletos | Emitir boletos                |
+| 6  | Controle de Veículos e Estacionamento | Cadastrar veículos no sistema                |
+
+🔗 [Acesse a pasta com os códigos da história 4](./)
+
+🔗 [Acesse a pasta com os códigos da história 5](./)
+
+🔗 [Acesse a pasta com os códigos da história 6](./)
+
+
+<br>
+
+### 💻 Versionamento no GitHub  
+
+O projeto está sendo versionado com commits frequentes diretamente na branch `main`, conforme boas práticas de controle de versão.  
+🔗 [Acesse o repositório no GitHub](https://github.com/gacneto/CondoWise/activity)  
+
+<br>
+
+### 🐛 Issue Tracker  
+
+O controle de tarefas e bugs está sendo feito por meio do sistema de issues do GitHub.  
+📌 Print da tela do issue tracker:  
+![Issue Tracker](Entregaveis/./)  
+🔗 [Acesse as Issues](https://github.com/gacneto/CondoWise/issues)  
+
+<br>
+
+### 📹 Screencast da Entrega  
+
+Foi produzido um screencast referente a História 4 - Registro de Visitantes, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube]()  
+
+Foi produzido um screencast referente a História 5 - Gestão de Pagamentos e Boletos, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube]() 
+
+Foi produzido um screencast referente a História 6 - Controle de Veículos e Estacionamento, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube]() 
+
+</details>
+
 
