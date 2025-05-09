@@ -1,0 +1,9 @@
+com/condowise/model/RegistroVisita.class
+com/condowise/repository/RegistroVisitaRepository.class
+com/condowise/controller/RegistroVisitaController.class
+com/condowise/model/Usuario.class
+com/condowise/Main.class
+com/condowise/service/RegistroVisitaService.class
+com/condowise/model/Porteiro.class
+com/condowise/model/Visitante.class
+com/condowise/model/Morador.class
