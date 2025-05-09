@@ -192,7 +192,7 @@ Nesta entrega, foram implementadas as seguintes histórias de usuário, com inte
 | 5  | Gestão de Pagamentos e Boletos | Emitir boletos                |
 | 6  | Controle de Veículos e Estacionamento | Cadastrar veículos no sistema                |
 
-🔗 [Acesse a pasta com os códigos da história 4](./)
+🔗 [Acesse a pasta com os códigos da história 4](./RegistrarVisitante)
 
 🔗 [Acesse a pasta com os códigos da história 5](./)
 
