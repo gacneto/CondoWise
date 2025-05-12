@@ -4,11 +4,13 @@ import com.condominio.model.Encomenda;
 import com.condominio.model.Morador;
 import com.condominio.model.Comunicado;
 import com.condominio.model.ReservaAreaComum;
+import com.condominio.model.Pagamento;
 import com.condominio.repository.ComunicadoRepository;
 import java.time.format.DateTimeFormatter;
 import com.condominio.repository.EncomendaRepository;
 import com.condominio.repository.MoradorRepository;
 import com.condominio.repository.ReservaAreaComumRepository;
+import com.condominio.repository.PagamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -31,6 +33,9 @@ public class MenuPrincipal {
     
     @Autowired
     private ReservaAreaComumRepository reservaAreaComumRepository;
+    
+    @Autowired
+    private PagamentoRepository pagamentoRepository;
 
     public void iniciar() {
         while (true) {
@@ -69,6 +74,7 @@ public class MenuPrincipal {
             System.out.println("5. Emitir Comunicado");  
             System.out.println("6. Ver Comunicados");
             System.out.println("7. Aprovar Reservas de Áreas Comuns");
+            System.out.println("8. Gestão de Pagamentos");
             System.out.println("0. Voltar");
             System.out.print("Escolha uma opção: ");
 
@@ -96,6 +102,9 @@ public class MenuPrincipal {
                 case 7:
                     aprovarReservas();
                     break;
+                case 8:
+                    menuGestaoPagamentos();
+                    break;
                 case 0:
                     return;
                 default:
@@ -121,6 +130,7 @@ public class MenuPrincipal {
             System.out.println("3. Ver Comunicados");
             System.out.println("4. Solicitar Reserva de Área Comum");
             System.out.println("5. Ver Minhas Reservas");
+            System.out.println("6. Ver Meus Pagamentos");
             System.out.println("0. Voltar");
             System.out.print("Escolha uma opção: ");
 
@@ -142,6 +152,9 @@ public class MenuPrincipal {
                     break;
                 case 5:
                     verMinhasReservas(morador);
+                    break;
+                case 6:
+                    verMeusPagamentos(morador);
                     break;
                 case 0:
                     return;
@@ -253,7 +266,7 @@ public class MenuPrincipal {
         System.out.println("Digite a mensagem do comunicado:");
         String mensagem = scanner.nextLine();
         
-        System.out.print("Digite o nome do autor (síndico): ");
+        System.out.print("Digite o nome do síndico: ");
         String autor = scanner.nextLine();
 
         Comunicado comunicado = new Comunicado(titulo, mensagem, autor);
@@ -386,6 +399,156 @@ public class MenuPrincipal {
             } else {
                 System.out.println("Reserva não encontrada!");
             }
+        }
+    }
+
+    private void menuGestaoPagamentos() {
+        while (true) {
+            System.out.println("\n=== Gestão de Pagamentos ===");
+            System.out.println("1. Emitir Boleto");
+            System.out.println("2. Registrar Pagamento");
+            System.out.println("3. Ver Pagamentos Pendentes");
+            System.out.println("4. Ver Histórico de Pagamentos");
+            System.out.println("0. Voltar");
+            System.out.print("Escolha uma opção: ");
+
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcao) {
+                case 1:
+                    emitirBoleto();
+                    break;
+                case 2:
+                    registrarPagamento();
+                    break;
+                case 3:
+                    verPagamentosPendentes();
+                    break;
+                case 4:
+                    verHistoricoPagamentos();
+                    break;
+                case 0:
+                    return;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }
+    }
+
+    private void emitirBoleto() {
+        System.out.print("Número do apartamento: ");
+        String apartamento = scanner.nextLine();
+
+        Morador morador = moradorRepository.findByApartamento(apartamento);
+        if (morador == null) {
+            System.out.println("Morador não encontrado");
+            return;
+        }
+
+        System.out.print("Valor do boleto: R$ ");
+        double valor = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Descrição do pagamento: ");
+        String descricao = scanner.nextLine();
+
+        System.out.print("Data de vencimento (dd/MM/yyyy): ");
+        String dataVencimentoStr = scanner.nextLine();
+        LocalDate dataVencimento = LocalDate.parse(dataVencimentoStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+        Pagamento pagamento = new Pagamento(morador, valor, descricao, dataVencimento);
+        pagamentoRepository.save(pagamento);
+        System.out.println("Boleto emitido com sucesso");
+    }
+
+    private void registrarPagamento() {
+        System.out.print("Número do apartamento: ");
+        String apartamento = scanner.nextLine();
+
+        Morador morador = moradorRepository.findByApartamento(apartamento);
+        if (morador == null) {
+            System.out.println("Morador não encontrado");
+            return;
+        }
+
+        List<Pagamento> pagamentosPendentes = pagamentoRepository.findByMoradorAndPago(morador, false);
+        if (pagamentosPendentes.isEmpty()) {
+            System.out.println("Não há pagamentos pendentes para este morador");
+            return;
+        }
+
+        System.out.println("\nPagamentos Pendentes:");
+        for (Pagamento pagamento : pagamentosPendentes) {
+            System.out.println("ID: " + pagamento.getId() + 
+                             " - Valor: R$ " + pagamento.getValor() + 
+                             " - Descrição: " + pagamento.getDescricao() +
+                             " - Vencimento: " + pagamento.getDataVencimento());
+        }
+
+        System.out.print("\nDigite o ID do pagamento registrado: ");
+        Long id = scanner.nextLong();
+        scanner.nextLine();
+
+        Pagamento pagamento = pagamentoRepository.findById(id).orElse(null);
+        if (pagamento != null && pagamento.getMorador().getId().equals(morador.getId())) {
+            pagamento.setPago(true);
+            pagamento.setDataPagamento(LocalDate.now());
+            pagamentoRepository.save(pagamento);
+            System.out.println("Pagamento registrado com sucesso!");
+        } else {
+            System.out.println("Pagamento não encontrado");
+        }
+    }
+
+    private void verPagamentosPendentes() {
+        List<Pagamento> pagamentosPendentes = pagamentoRepository.findByPago(false);
+        if (pagamentosPendentes.isEmpty()) {
+            System.out.println("Não há pagamentos pendentes");
+            return;
+        }
+
+        System.out.println("\nPagamentos Pendentes:");
+        for (Pagamento pagamento : pagamentosPendentes) {
+            System.out.println("Apartamento: " + pagamento.getMorador().getApartamento() +
+                             " - Valor: R$ " + pagamento.getValor() +
+                             " - Descrição: " + pagamento.getDescricao() +
+                             " - Vencimento: " + pagamento.getDataVencimento());
+        }
+    }
+
+    private void verHistoricoPagamentos() {
+        List<Pagamento> pagamentos = pagamentoRepository.findAll();
+        if (pagamentos.isEmpty()) {
+            System.out.println("Não há pagamentos registrados");
+            return;
+        }
+
+        System.out.println("\nHistórico de Pagamentos:");
+        for (Pagamento pagamento : pagamentos) {
+            System.out.println("Apartamento: " + pagamento.getMorador().getApartamento() +
+                             " - Valor: R$ " + pagamento.getValor() +
+                             " - Descrição: " + pagamento.getDescricao() +
+                             " - Vencimento: " + pagamento.getDataVencimento() +
+                             " - Status: " + (pagamento.isPago() ? "Pago" : "Pendente") +
+                             (pagamento.isPago() ? " - Data do Pagamento: " + pagamento.getDataPagamento() : ""));
+        }
+    }
+
+    private void verMeusPagamentos(Morador morador) {
+        List<Pagamento> pagamentos = pagamentoRepository.findByMorador(morador);
+        if (pagamentos.isEmpty()) {
+            System.out.println("Não há pagamentos registrados para seu apartamento");
+            return;
+        }
+
+        System.out.println("\nSeus Pagamentos:");
+        for (Pagamento pagamento : pagamentos) {
+            System.out.println("Valor: R$ " + pagamento.getValor() +
+                             " - Descrição: " + pagamento.getDescricao() +
+                             " - Vencimento: " + pagamento.getDataVencimento() +
+                             " - Status: " + (pagamento.isPago() ? "Pago" : "Pendente") +
+                             (pagamento.isPago() ? " - Data do Pagamento: " + pagamento.getDataPagamento() : ""));
         }
     }
 } 
