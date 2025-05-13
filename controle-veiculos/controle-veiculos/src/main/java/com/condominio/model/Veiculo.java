@@ -44,4 +44,11 @@ public class Veiculo {
     public Morador getMorador() { return morador; }
 
     public void setMorador(Morador morador) { this.morador = morador; }
+    
+    @Override
+public String toString() {
+    return "Placa: " + placa + ", Modelo: " + modelo + ", Cor: " + cor;
 }
+
+}
+    

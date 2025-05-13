@@ -13,7 +13,7 @@ public class Morador {
 
     private String nome;
 
-    @OneToMany(mappedBy = "morador", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "morador", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Veiculo> veiculos = new ArrayList<>();
 
     // Construtores

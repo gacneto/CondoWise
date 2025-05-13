@@ -31,29 +31,25 @@ public class EstacionamentoService {
     }
 
     public void cadastrarVeiculo(String nomeMorador, String placa, String modelo, String cor) {
-        Morador morador = moradorRepository.findByNome(nomeMorador);
+    Morador morador = moradorRepository.findByNome(nomeMorador);
 
-        if (morador == null) {
-            System.out.println("Morador não encontrado.");
-            return;
-        }
-
-        if (morador.getVeiculos().size() >= LIMITE_VEICULOS_POR_MORADOR) {
-            System.out.println("Você atingiu o limite de veículos permitidos por morador.");
-            return;
-        }
-
-        // Criando e salvando o novo veículo no banco
-        Veiculo veiculo = new Veiculo(placa, modelo, cor);
-        morador.adicionarVeiculo(veiculo);
-
-        // Salvando o veículo no repositório
-        veiculoRepository.save(veiculo);
-        moradorRepository.save(morador);
-
-        System.out.println("Veículo cadastrado com sucesso!");
+    if (morador == null) {
+        System.out.println("Morador não encontrado.");
+        return;
     }
 
+    if (morador.getVeiculos().size() >= LIMITE_VEICULOS_POR_MORADOR) {
+        System.out.println("Você atingiu o limite de veículos permitidos por morador.");
+        return;
+    }
+
+    Veiculo veiculo = new Veiculo(placa, modelo, cor);
+    morador.adicionarVeiculo(veiculo); // já seta o morador no veículo
+
+    moradorRepository.save(morador); // salvar morador com Cascade salva o veículo também
+
+    System.out.println("Veículo cadastrado com sucesso!");
+}
     public void listarVeiculos(String nomeMorador) {
         Morador morador = moradorRepository.findByNome(nomeMorador);
 
