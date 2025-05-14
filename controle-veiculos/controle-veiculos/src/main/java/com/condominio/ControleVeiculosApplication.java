@@ -28,6 +28,7 @@ public class ControleVeiculosApplication implements CommandLineRunner {
             System.out.println("1. Cadastrar Morador");
             System.out.println("2. Cadastrar Veículo");
             System.out.println("3. Listar Veículos de um Morador");
+            System.out.println("4. Remover Veículo");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -61,6 +62,14 @@ public class ControleVeiculosApplication implements CommandLineRunner {
                     System.out.print("Digite o nome do morador: ");
                     String nomeConsulta = scanner.nextLine();
                     service.listarVeiculos(nomeConsulta);
+                    break;
+                    
+                case 4:
+                    System.out.print("Digite o nome do morador: ");
+                    String nomeRemocao = scanner.nextLine();
+                    System.out.print("Digite a placa do veículo a ser removido: ");
+                    String placaRemocao = scanner.nextLine();
+                    service.removerVeiculo(nomeRemocao, placaRemocao);
                     break;
 
                 case 0:

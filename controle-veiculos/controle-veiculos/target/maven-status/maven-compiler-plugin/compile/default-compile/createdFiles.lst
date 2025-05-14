@@ -1,0 +1,6 @@
+com\condominio\repository\MoradorRepository.class
+com\condominio\repository\VeiculoRepository.class
+com\condominio\model\Veiculo.class
+com\condominio\service\EstacionamentoService.class
+com\condominio\model\Morador.class
+com\condominio\ControleVeiculosApplication.class

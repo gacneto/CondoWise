@@ -4,6 +4,7 @@ import com.condominio.model.Morador;
 import com.condominio.model.Veiculo;
 import com.condominio.repository.MoradorRepository;
 import com.condominio.repository.VeiculoRepository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -67,5 +68,33 @@ public class EstacionamentoService {
         for (Veiculo v : morador.getVeiculos()) {
             System.out.println("- Placa: " + v.getPlaca() + ", Modelo: " + v.getModelo() + ", Cor: " + v.getCor());
         }
+    }
+
+    @Transactional
+    public void removerVeiculo(String nomeMorador, String placa) {
+        Morador morador = moradorRepository.findByNome(nomeMorador);
+
+        if (morador == null) {
+            System.out.println("Morador não encontrado.");
+            return;
+        }
+
+        Veiculo veiculoParaRemover = null;
+        for (Veiculo v : morador.getVeiculos()) {
+            if (v.getPlaca().equalsIgnoreCase(placa)) {
+                veiculoParaRemover = v;
+                break;
+            }
+        }
+
+        if (veiculoParaRemover == null) {
+            System.out.println("Veículo não encontrado.");
+            return;
+        }
+
+        // Remove corretamente usando o método da entidade
+        morador.removerVeiculo(veiculoParaRemover);
+
+        System.out.println("Veículo removido com sucesso.");
     }
 }
