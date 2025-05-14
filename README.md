@@ -212,7 +212,7 @@ O projeto está sendo versionado com commits frequentes diretamente na branch `m
 
 O controle de tarefas e bugs está sendo feito por meio do sistema de issues do GitHub.  
 📌 Print da tela do issue tracker:  
-![Issue Tracker](Entregaveis/./)  
+![Issue Tracker](Entregaveis/./IssueTracker3.png)  
 🔗 [Acesse as Issues](https://github.com/gacneto/CondoWise/issues)  
 
 <br>
