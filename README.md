@@ -220,7 +220,7 @@ O controle de tarefas e bugs está sendo feito por meio do sistema de issues do 
 ### 📹 Screencast da Entrega  
 
 Foi produzido um screencast referente a História 4 - Registro de Visitantes, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
-🔗 [Assista ao vídeo no YouTube](https://youtu.be/0MT4iYX-WRY?si=QZyo3ClAdrWUgshS)  
+🔗 [Assista ao vídeo no YouTube]()  
 
 Foi produzido um screencast referente a História 5 - Gestão de Pagamentos e Boletos, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
 🔗 [Assista ao vídeo no YouTube]() 
