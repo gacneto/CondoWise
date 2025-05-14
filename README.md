@@ -194,9 +194,9 @@ Nesta entrega, foram implementadas as seguintes histórias de usuário, com inte
 
 🔗 [Acesse a pasta com os códigos da história 4](./RegistrarVisitante)
 
-🔗 [Acesse a pasta com os códigos da história 5](./)
+🔗 [Acesse a pasta com os códigos da história 5](./Projeto%203%20workspace)
 
-🔗 [Acesse a pasta com os códigos da história 6](./)
+🔗 [Acesse a pasta com os códigos da história 6](./controle-veiculos)
 
 
 <br>
@@ -220,7 +220,7 @@ O controle de tarefas e bugs está sendo feito por meio do sistema de issues do 
 ### 📹 Screencast da Entrega  
 
 Foi produzido um screencast referente a História 4 - Registro de Visitantes, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
-🔗 [Assista ao vídeo no YouTube]()  
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/0MT4iYX-WRY?si=QZyo3ClAdrWUgshS)  
 
 Foi produzido um screencast referente a História 5 - Gestão de Pagamentos e Boletos, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
 🔗 [Assista ao vídeo no YouTube]() 
