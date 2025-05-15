@@ -228,17 +228,15 @@ Foi produzido um screencast referente a História 5 - Gestão de Pagamentos e Bo
 Foi produzido um screencast referente a História 6 - Controle de Veículos e Estacionamento, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
 🔗 [Assista ao vídeo no YouTube]() 
 
-</details>
-
 ## 🕑 Cronograma 
 
 <details> 
   <summary>📌 Clique aqui para acessar o nosso cronograma!</summary>
 
-Nosso cronograma para controle de atividades foi feito através do Notion, tornando possível a atribuição de atividades para cada membro do grupo, asssim como a data de início e fim de cada tarefa.
+🔗 [Acesse o cronograma no Notion](https://grey-cartoon-38a.notion.site/ebd/1a435e0884138019aa6afa1816602598?v=1a435e088413806ea7f4000c09b2c020)
 
-<iframe src="https://grey-cartoon-38a.notion.site/ebd/1a435e0884138019aa6afa1816602598?v=1a435e088413806ea7f4000c09b2c020" width="100%" height="600" frameborder="0" allowfullscreen />
-  
+Nosso cronograma para controle de atividades foi feito através do Notion, tornando possível a atribuição de atividades para cada membro do grupo, assim como a data de início e fim de cada tarefa.
+
 </details>
 
 
