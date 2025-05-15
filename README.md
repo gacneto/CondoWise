@@ -230,9 +230,9 @@ Foi produzido um screencast referente a História 6 - Controle de Veículos e Es
 
 </details>
 
-<details>
+## 🕑 Cronograma 
 
-##Cronograma 🕑
+<details>
 
 Nosso cronograma para controle de atividades foi feito através do Notion, tornando possível a atribuição de atividades para cada membro do grupo, asssim como a data de início e fim de cada tarefa.
 
