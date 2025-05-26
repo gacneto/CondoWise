@@ -6,11 +6,38 @@ O CondoWise é um sistema de gestão condominial que facilita a comunicação e 
 ### 🎯 Objetivos
 O objetivo do CondoWise é otimizar a gestão condominial, centralizando processos administrativos e melhorando a comunicação entre síndico, porteiros e moradores. A plataforma busca oferecer mais organização, transparência e eficiência na administração do condomínio.
 
-### 📌 Status do Projeto
-🚧 Em desenvolvimento 🚧
+### 📌 Status do Projeto  
+✅ **Projeto concluído!**  
 
-### 🛠 Tecnologias Utilizadas
-🚧 Em desenvolvimento 🚧
+### 🚀 Futuras Implementações  
+- Desenvolvimento de uma **interface gráfica** (frontend).  
+- Melhorias na **usabilidade** e **experiência do usuário**.
+
+### 🛠 Tecnologias Utilizadas  
+- Java  
+- Spring Boot
+
+### ▶️ Como Rodar o Projeto  
+
+#### ✅ Pré-requisitos:  
+- Java JDK 17 ou superior instalado  
+- Maven instalado  
+
+#### 🚀 Passos para executar:
+
+```bash
+# Clone o repositório
+git clone https://github.com/gacneto/CondoWise.git
+
+# Acesse a pasta do projeto
+cd CondoWise
+
+# Compile o projeto
+mvn clean install
+
+# Execute a aplicação
+mvn spring-boot:run
+```
 
 ### 👨‍💻 Participantes
 - **Luca Monteiro de Victor**
@@ -223,7 +250,7 @@ Foi produzido um screencast referente a História 4 - Registro de Visitantes, de
 🔗 [Assista ao vídeo no YouTube](https://youtu.be/Sjvk_430RDg)  
 
 Foi produzido um screencast referente a História 5 - Gestão de Pagamentos e Boletos, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
-🔗 [Assista ao vídeo no YouTube]() 
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/yXY1NMu9HDc) 
 
 Foi produzido um screencast referente a História 6 - Controle de Veículos e Estacionamento, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
 🔗 [Assista ao vídeo no YouTube](https://youtu.be/hxVKNRX9PpU) 
