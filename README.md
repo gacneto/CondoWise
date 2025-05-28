@@ -17,20 +17,21 @@ O objetivo do CondoWise é otimizar a gestão condominial, centralizando process
 - Java  
 - Spring Boot
 
-### ▶️ Como Rodar o Projeto  
+### ▶️ Como Rodar o Projeto
 
-#### ✅ Pré-requisitos:  
-- Java JDK 17 ou superior instalado  
-- Maven instalado  
+### ✅ Pré-requisitos
 
-#### 🚀 Passos para executar:
+- Java JDK 17 ou superior instalado
+- Maven instalado
+
+### 🚀 Passos para executar
 
 ```bash
 # Clone o repositório
 git clone https://github.com/gacneto/CondoWise.git
 
-# Acesse a pasta do projeto
-cd CondoWise
+# Acesse a pasta que contém o sistema completo (código e banco de dados)
+cd CondoWise/Projeto\ Final/sistema-encomendas
 
 # Compile o projeto
 mvn clean install
@@ -38,6 +39,15 @@ mvn clean install
 # Execute a aplicação
 mvn spring-boot:run
 ```
+
+### ℹ️ Observação
+
+- Toda a junção dos códigos e do banco de dados está organizada dentro da pasta:
+
+```bash
+Projeto Final/sistema-encomendas
+```
+- Certifique-se de acessar esta pasta antes de compilar e executar o projeto
 
 ### 👨‍💻 Participantes
 - **Luca Monteiro de Victor**
