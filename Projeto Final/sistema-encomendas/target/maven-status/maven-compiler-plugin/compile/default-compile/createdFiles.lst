@@ -1,0 +1,12 @@
+com\condominio\repository\ReservaAreaComumRepository.class
+com\condominio\model\Morador.class
+com\condominio\model\ReservaAreaComum.class
+com\condominio\model\Encomenda.class
+com\condominio\SistemaEncomendasApplication.class
+com\condominio\repository\MoradorRepository.class
+com\condominio\repository\EncomendaRepository.class
+com\condominio\MenuPrincipal.class
+com\condominio\repository\ComunicadoRepository.class
+com\condominio\model\Comunicado.class
+com\condominio\model\Pagamento.class
+com\condominio\repository\PagamentoRepository.class

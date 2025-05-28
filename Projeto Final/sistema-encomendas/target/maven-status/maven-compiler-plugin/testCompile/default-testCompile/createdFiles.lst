@@ -1,0 +1,5 @@
+com\condominio\model\ComunicadoTest.class
+com\condominio\model\MoradorTest.class
+com\condominio\model\EncomendaTest.class
+com\condominio\SistemaEncomendasApplicationTests.class
+com\condominio\model\ReservaAreaComumTest.class
