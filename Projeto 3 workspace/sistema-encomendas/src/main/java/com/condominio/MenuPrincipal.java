@@ -5,12 +5,19 @@ import com.condominio.model.Morador;
 import com.condominio.model.Comunicado;
 import com.condominio.model.ReservaAreaComum;
 import com.condominio.model.Pagamento;
+import com.condominio.model.Chamado;
+import com.condominio.model.Visitante;
+import com.condominio.model.Veiculo;
 import com.condominio.repository.ComunicadoRepository;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 import com.condominio.repository.EncomendaRepository;
 import com.condominio.repository.MoradorRepository;
 import com.condominio.repository.ReservaAreaComumRepository;
 import com.condominio.repository.PagamentoRepository;
+import com.condominio.repository.ChamadoRepository;
+import com.condominio.repository.VisitanteRepository;
+import com.condominio.repository.VeiculoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -36,6 +43,15 @@ public class MenuPrincipal {
     
     @Autowired
     private PagamentoRepository pagamentoRepository;
+
+    @Autowired
+    private ChamadoRepository chamadoRepository;
+
+    @Autowired
+    private VisitanteRepository visitanteRepository;
+
+    @Autowired
+    private VeiculoRepository veiculoRepository;
 
     public void iniciar() {
         while (true) {
@@ -74,7 +90,10 @@ public class MenuPrincipal {
             System.out.println("5. Emitir Comunicado");  
             System.out.println("6. Ver Comunicados");
             System.out.println("7. Aprovar Reservas de Áreas Comuns");
-            System.out.println("8. Gestão de Pagamentos");
+            System.out.println("8. Gestão de Boletos");
+            System.out.println("9. Gerenciar Chamados de Manutenção");
+            System.out.println("10. Gerenciar Visitantes");
+            System.out.println("11. Gerenciar Veículos");
             System.out.println("0. Voltar");
             System.out.print("Escolha uma opção: ");
 
@@ -105,6 +124,15 @@ public class MenuPrincipal {
                 case 8:
                     menuGestaoPagamentos();
                     break;
+                case 9:
+                    gerenciarChamados();
+                    break;
+                case 10:
+                    gerenciarVisitantes();
+                    break;
+                case 11:
+                    gerenciarVeiculos();
+                    break;
                 case 0:
                     return;
                 default:
@@ -130,7 +158,13 @@ public class MenuPrincipal {
             System.out.println("3. Ver Comunicados");
             System.out.println("4. Solicitar Reserva de Área Comum");
             System.out.println("5. Ver Minhas Reservas");
-            System.out.println("6. Ver Meus Pagamentos");
+            System.out.println("6. Ver Meus Boletos");
+            System.out.println("7. Abrir Chamado de Manutenção");
+            System.out.println("8. Ver Meus Chamados");
+            System.out.println("9. Registrar Visitante");
+            System.out.println("10. Ver Meus Visitantes");
+            System.out.println("11. Cadastrar Veículo");
+            System.out.println("12. Ver Meus Veículos");
             System.out.println("0. Voltar");
             System.out.print("Escolha uma opção: ");
 
@@ -155,6 +189,24 @@ public class MenuPrincipal {
                     break;
                 case 6:
                     verMeusPagamentos(morador);
+                    break;
+                case 7:
+                    abrirChamado(morador);
+                    break;
+                case 8:
+                    verMeusChamados(morador);
+                    break;
+                case 9:
+                    registrarVisitante(morador);
+                    break;
+                case 10:
+                    verMeusVisitantes(morador);
+                    break;
+                case 11:
+                    cadastrarVeiculo(morador);
+                    break;
+                case 12:
+                    verMeusVeiculos(morador);
                     break;
                 case 0:
                     return;
@@ -404,7 +456,7 @@ public class MenuPrincipal {
 
     private void menuGestaoPagamentos() {
         while (true) {
-            System.out.println("\n=== Gestão de Pagamentos ===");
+            System.out.println("\n=== Gestão de Boletos ===");
             System.out.println("1. Emitir Boleto");
             System.out.println("2. Registrar Pagamento");
             System.out.println("3. Ver Pagamentos Pendentes");
@@ -453,9 +505,15 @@ public class MenuPrincipal {
         System.out.print("Descrição do pagamento: ");
         String descricao = scanner.nextLine();
 
-        System.out.print("Data de vencimento (dd/MM/yyyy): ");
-        String dataVencimentoStr = scanner.nextLine();
-        LocalDate dataVencimento = LocalDate.parse(dataVencimentoStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        System.out.print("Digite o dia do vencimento (1-31): ");
+        int dia = scanner.nextInt();
+        System.out.print("Digite o mês do vencimento (1-12): ");
+        int mes = scanner.nextInt();
+        System.out.print("Digite o ano do vencimento: ");
+        int ano = scanner.nextInt();
+        scanner.nextLine();
+
+        LocalDate dataVencimento = LocalDate.of(ano, mes, dia);
 
         Pagamento pagamento = new Pagamento(morador, valor, descricao, dataVencimento);
         pagamentoRepository.save(pagamento);
@@ -549,6 +607,272 @@ public class MenuPrincipal {
                              " - Vencimento: " + pagamento.getDataVencimento() +
                              " - Status: " + (pagamento.isPago() ? "Pago" : "Pendente") +
                              (pagamento.isPago() ? " - Data do Pagamento: " + pagamento.getDataPagamento() : ""));
+        }
+    }
+
+    private void abrirChamado(Morador morador) {
+        System.out.println("\n=== Abrir Chamado de Manutenção ===");
+        System.out.println("Escolha o tipo de manutenção:");
+        System.out.println("1. Banheiro da Área Comum");
+        System.out.println("2. Elevador");
+        System.out.println("3. Limpeza");
+        System.out.print("Opção: ");
+        
+        int opcao = scanner.nextInt();
+        scanner.nextLine();
+        
+        Chamado.TipoChamado tipo;
+        switch (opcao) {
+            case 1:
+                tipo = Chamado.TipoChamado.BANHEIRO_COMUM;
+                break;
+            case 2:
+                tipo = Chamado.TipoChamado.ELEVADOR;
+                break;
+            case 3:
+                tipo = Chamado.TipoChamado.LIMPEZA;
+                break;
+            default:
+                System.out.println("Opção inválida!");
+                return;
+        }
+        
+        System.out.println("Digite a descrição do problema:");
+        String descricao = scanner.nextLine();
+        
+        Chamado chamado = new Chamado(morador, tipo, descricao);
+        chamadoRepository.save(chamado);
+        System.out.println("Chamado aberto com sucesso! Aguarde a aprovação do síndico.");
+    }
+    
+    private void verMeusChamados(Morador morador) {
+        List<Chamado> chamados = chamadoRepository.findByMoradorId(morador.getId());
+        
+        if (chamados.isEmpty()) {
+            System.out.println("Você não possui chamados abertos.");
+            return;
+        }
+        
+        System.out.println("\n=== Seus Chamados ===");
+        for (Chamado chamado : chamados) {
+            System.out.println("Tipo: " + chamado.getTipo());
+            System.out.println("Descrição: " + chamado.getDescricao());
+            System.out.println("Data de Abertura: " + chamado.getDataAbertura().format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+            System.out.println("Status: " + (chamado.isAprovado() ? "Aprovado" : "Aguardando aprovação"));
+            if (chamado.getObservacaoSindico() != null && !chamado.getObservacaoSindico().isEmpty()) {
+                System.out.println("Observação do Síndico: " + chamado.getObservacaoSindico());
+            }
+            System.out.println("-------------------");
+        }
+    }
+    
+    private void gerenciarChamados() {
+        List<Chamado> chamadosPendentes = chamadoRepository.findByAprovado(false);
+        
+        if (chamadosPendentes.isEmpty()) {
+            System.out.println("Não há chamados pendentes de aprovação.");
+            return;
+        }
+        
+        System.out.println("\n=== Chamados Pendentes de Aprovação ===");
+        for (Chamado chamado : chamadosPendentes) {
+            System.out.println("ID: " + chamado.getId());
+            System.out.println("Morador: " + chamado.getMorador().getNome() + 
+                             " - Apartamento: " + chamado.getMorador().getApartamento());
+            System.out.println("Tipo: " + chamado.getTipo());
+            System.out.println("Descrição: " + chamado.getDescricao());
+            System.out.println("Data de Abertura: " + chamado.getDataAbertura().format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+            System.out.println("-------------------");
+        }
+        
+        System.out.print("\nDigite o ID do chamado que deseja aprovar (ou 0 para voltar): ");
+        Long idChamado = scanner.nextLong();
+        scanner.nextLine();
+        
+        if (idChamado == 0) {
+            return;
+        }
+        
+        System.out.print("Deseja aprovar (S/N)? ");
+        String resposta = scanner.nextLine().toUpperCase();
+        
+        if (resposta.equals("S")) {
+            Chamado chamado = chamadoRepository.findById(idChamado).orElse(null);
+            if (chamado != null) {
+                System.out.print("Digite uma observação (opcional): ");
+                String observacao = scanner.nextLine();
+                
+                chamado.setAprovado(true);
+                chamado.setObservacaoSindico(observacao);
+                chamado.setDataResposta(LocalDateTime.now());
+                chamadoRepository.save(chamado);
+                System.out.println("Chamado aprovado com sucesso!");
+            } else {
+                System.out.println("Chamado não encontrado!");
+            }
+        }
+    }
+
+    private void registrarVisitante(Morador morador) {
+        System.out.println("\n=== Registrar Visitante ===");
+        System.out.print("Nome do visitante: ");
+        String nome = scanner.nextLine();
+        
+        Visitante visitante = new Visitante(morador, nome);
+        visitanteRepository.save(visitante);
+        System.out.println("Visitante registrado com sucesso! Aguarde a aprovação do síndico.");
+    }
+    
+    private void verMeusVisitantes(Morador morador) {
+        List<Visitante> visitantes = visitanteRepository.findByMoradorId(morador.getId());
+        
+        if (visitantes.isEmpty()) {
+            System.out.println("Você não possui visitantes registrados.");
+            return;
+        }
+        
+        System.out.println("\n=== Seus Visitantes ===");
+        for (Visitante visitante : visitantes) {
+            System.out.println("Nome: " + visitante.getNome());
+            System.out.println("Data de Registro: " + visitante.getDataEntrada().format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+            System.out.println("Status: " + (visitante.isAprovado() ? "Aprovado" : "Aguardando aprovação"));
+            if (visitante.getObservacaoSindico() != null && !visitante.getObservacaoSindico().isEmpty()) {
+                System.out.println("Observação do Síndico: " + visitante.getObservacaoSindico());
+            }
+            System.out.println("-------------------");
+        }
+    }
+    
+    private void gerenciarVisitantes() {
+        List<Visitante> visitantesPendentes = visitanteRepository.findByAprovado(false);
+        
+        if (visitantesPendentes.isEmpty()) {
+            System.out.println("Não há visitantes pendentes de aprovação.");
+            return;
+        }
+        
+        System.out.println("\n=== Visitantes Pendentes de Aprovação ===");
+        for (Visitante visitante : visitantesPendentes) {
+            System.out.println("ID: " + visitante.getId());
+            System.out.println("Morador: " + visitante.getMorador().getNome() + 
+                             " - Apartamento: " + visitante.getMorador().getApartamento());
+            System.out.println("Visitante: " + visitante.getNome());
+            System.out.println("Data de Registro: " + visitante.getDataEntrada().format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+            System.out.println("-------------------");
+        }
+        
+        System.out.print("\nDigite o ID do visitante que deseja aprovar (ou 0 para voltar): ");
+        Long idVisitante = scanner.nextLong();
+        scanner.nextLine();
+        
+        if (idVisitante == 0) {
+            return;
+        }
+        
+        System.out.print("Deseja aprovar (S/N)? ");
+        String resposta = scanner.nextLine().toUpperCase();
+        
+        if (resposta.equals("S")) {
+            Visitante visitante = visitanteRepository.findById(idVisitante).orElse(null);
+            if (visitante != null) {
+                System.out.print("Digite uma observação (opcional): ");
+                String observacao = scanner.nextLine();
+                
+                visitante.setAprovado(true);
+                visitante.setObservacaoSindico(observacao);
+                visitante.setDataResposta(LocalDateTime.now());
+                visitanteRepository.save(visitante);
+                System.out.println("Visitante aprovado com sucesso!");
+            } else {
+                System.out.println("Visitante não encontrado!");
+            }
+        }
+    }
+
+    private void cadastrarVeiculo(Morador morador) {
+        System.out.println("\n=== Cadastrar Veículo ===");
+        System.out.print("Modelo do veículo: ");
+        String modelo = scanner.nextLine();
+        
+        System.out.print("Placa do veículo: ");
+        String placa = scanner.nextLine();
+        
+        Veiculo veiculo = new Veiculo(morador, modelo, placa);
+        veiculoRepository.save(veiculo);
+        System.out.println("Veículo cadastrado com sucesso! Aguarde a aprovação do síndico.");
+    }
+    
+    private void verMeusVeiculos(Morador morador) {
+        List<Veiculo> veiculos = veiculoRepository.findByMoradorId(morador.getId());
+        
+        if (veiculos.isEmpty()) {
+            System.out.println("Você não possui veículos cadastrados.");
+            return;
+        }
+        
+        System.out.println("\n=== Seus Veículos ===");
+        for (Veiculo veiculo : veiculos) {
+            System.out.println("Modelo: " + veiculo.getModelo());
+            System.out.println("Placa: " + veiculo.getPlaca());
+            System.out.println("Data de Cadastro: " + veiculo.getDataCadastro().format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+            System.out.println("Status: " + (veiculo.isAprovado() ? "Aprovado" : "Aguardando aprovação"));
+            if (veiculo.getObservacaoSindico() != null && !veiculo.getObservacaoSindico().isEmpty()) {
+                System.out.println("Observação do Síndico: " + veiculo.getObservacaoSindico());
+            }
+            System.out.println("-------------------");
+        }
+    }
+    
+    private void gerenciarVeiculos() {
+        List<Veiculo> veiculosPendentes = veiculoRepository.findByAprovado(false);
+        
+        if (veiculosPendentes.isEmpty()) {
+            System.out.println("Não há veículos pendentes de aprovação.");
+            return;
+        }
+        
+        System.out.println("\n=== Veículos Pendentes de Aprovação ===");
+        for (Veiculo veiculo : veiculosPendentes) {
+            System.out.println("ID: " + veiculo.getId());
+            System.out.println("Morador: " + veiculo.getMorador().getNome() + 
+                             " - Apartamento: " + veiculo.getMorador().getApartamento());
+            System.out.println("Modelo: " + veiculo.getModelo());
+            System.out.println("Placa: " + veiculo.getPlaca());
+            System.out.println("Data de Cadastro: " + veiculo.getDataCadastro().format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+            System.out.println("-------------------");
+        }
+        
+        System.out.print("\nDigite o ID do veículo que deseja aprovar (ou 0 para voltar): ");
+        Long idVeiculo = scanner.nextLong();
+        scanner.nextLine();
+        
+        if (idVeiculo == 0) {
+            return;
+        }
+        
+        System.out.print("Deseja aprovar (S/N)? ");
+        String resposta = scanner.nextLine().toUpperCase();
+        
+        if (resposta.equals("S")) {
+            Veiculo veiculo = veiculoRepository.findById(idVeiculo).orElse(null);
+            if (veiculo != null) {
+                System.out.print("Digite uma observação (opcional): ");
+                String observacao = scanner.nextLine();
+                
+                veiculo.setAprovado(true);
+                veiculo.setObservacaoSindico(observacao);
+                veiculo.setDataResposta(LocalDateTime.now());
+                veiculoRepository.save(veiculo);
+                System.out.println("Veículo aprovado com sucesso!");
+            } else {
+                System.out.println("Veículo não encontrado!");
+            }
         }
     }
 } 
