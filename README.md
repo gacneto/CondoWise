@@ -3,19 +3,29 @@
 ### 📌 Sobre o Projeto
 O CondoWise é um sistema de gestão condominial que facilita a comunicação e a administração do condomínio. Ele permite o agendamento de áreas comuns, controle de visitantes, notificações de encomendas, acompanhamento de boletos e chamados de manutenção. A plataforma centraliza informações e processos, garantindo mais organização, transparência e eficiência para síndicos, porteiros e moradores.
 
+<br>
+
 ### 🎯 Objetivos
 O objetivo do CondoWise é otimizar a gestão condominial, centralizando processos administrativos e melhorando a comunicação entre síndico, porteiros e moradores. A plataforma busca oferecer mais organização, transparência e eficiência na administração do condomínio.
 
+<br>
+
 ### 📌 Status do Projeto  
 ✅ **Projeto concluído!**  
+
+<br>
 
 ### 🚀 Futuras Implementações  
 - Desenvolvimento de uma **interface gráfica** (frontend).  
 - Melhorias na **usabilidade** e **experiência do usuário**.
 
+<br>
+
 ### 🛠 Tecnologias Utilizadas  
 - Java  
 - Spring Boot
+
+<br>
 
 ### ▶️ Como Rodar o Projeto
 
@@ -49,12 +59,16 @@ Projeto Final/sistema-encomendas
 ```
 - Certifique-se de acessar esta pasta antes de compilar e executar o projeto
 
+<br>
+
 ### 👨‍💻 Participantes
 - **Luca Monteiro de Victor**
 - **Lucas Barcelar de Carvalho**
 - **João Pedro Gomes Penedo**
 - **Tiago Galvão Monteiro**
 - **Caio Felipe da Silva Rodrigues**
+
+<br>
 
 ## 📦 Entrega 01
 
