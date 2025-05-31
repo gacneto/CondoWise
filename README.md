@@ -279,6 +279,9 @@ Foi produzido um screencast referente a História 5 - Gestão de Pagamentos e Bo
 Foi produzido um screencast referente a História 6 - Controle de Veículos e Estacionamento, demonstrando o uso do sistema + teste automatizado nesta entrega, com áudio explicativo ou legendas.  
 🔗 [Assista ao vídeo no YouTube](https://youtu.be/hxVKNRX9PpU) 
 
+Foi produzido um screencast referente ao Sistema Completo - Junção de todas as histórias com Menu + com áudio explicativo ou legendas.  
+🔗 [Assista ao vídeo no YouTube](https://youtu.be/Yo3mxRNs9DM) 
+
 </details>
 
 ## 🕑 Cronograma 
